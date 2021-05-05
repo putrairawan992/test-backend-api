@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "d63ee728-866b-478f-ab48-77890422e9ca",
+		"name": "Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/invoices?page=2&limit=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/invoices",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "393"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"189-x/AseDxIMcNI3Zw9k/UhEb6O7VQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 13:30:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"results\": {\n            \"count\": 1,\n            \"rows\": [\n                {\n                    \"id\": 1,\n                    \"Date\": \"2021-05-05T13:14:25.000Z\",\n                    \"UserEmail\": \"email@mail.com\",\n                    \"PaymentMethod\": \"TRANSFER\",\n                    \"createdAt\": \"2021-05-05T13:14:25.000Z\",\n                    \"updatedAt\": \"2021-05-05T13:14:37.000Z\",\n                    \"course\": {\n                        \"CourseName\": \"Javascript ++\",\n                        \"Instructor\": \"John Doeeee\",\n                        \"Price\": 1000,\n                        \"IncomeSharing\": \"0.2\",\n                        \"TotalRevenue\": \"200.0\"\n                    }\n                }\n            ]\n        },\n        \"firstPage\": 1,\n        \"lastPage\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "course_name",
+							"value": "Javascript",
+							"type": "text"
+						},
+						{
+							"key": "instructor",
+							"value": "John Doe",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "income_sharing",
+							"value": "0.2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "email@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "payment_method",
+							"value": "CREDIT_CARD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/invoices",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"invoices"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "store",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "course_name",
+									"value": "Javascript",
+									"type": "text"
+								},
+								{
+									"key": "instructor",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "income_sharing",
+									"value": "0.2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "CREDIT_CARD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/invoices",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-tc9hKYg9BGcjxOVvKqEC2d7BtiQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 12:37:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"invoice\": {\n            \"id\": 2,\n            \"UserEmail\": \"email@mail.com\",\n            \"PaymentMethod\": \"CREDIT_CARD\",\n            \"updatedAt\": \"2021-05-05T12:37:46.961Z\",\n            \"createdAt\": \"2021-05-05T12:37:46.961Z\"\n        },\n        \"course\": {\n            \"id\": 2,\n            \"CourseName\": \"Javascript\",\n            \"Instructor\": \"John Doe\",\n            \"Price\": 1000,\n            \"IncomeSharing\": 0.2,\n            \"updatedAt\": \"2021-05-05T12:37:46.978Z\",\n            \"createdAt\": \"2021-05-05T12:37:46.978Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "course_name",
+							"value": "Javascript ++",
+							"type": "text"
+						},
+						{
+							"key": "instructor",
+							"value": "John Doeeee",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "income_sharing",
+							"value": "0.2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "email@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "payment_method",
+							"value": "TRANSFER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/invoices/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "course_name",
+									"value": "Javascript ++",
+									"type": "text"
+								},
+								{
+									"key": "instructor",
+									"value": "John Doeeee",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "income_sharing",
+									"value": "0.2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "TRANSFER",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/invoices/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"invoices",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "402"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"192-+5T441EPBNKWM5Eh5KgPxfVCxAc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 12:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"updated\",\n    \"data\": {\n        \"invoice\": {\n            \"id\": 1,\n            \"Date\": \"2021-05-05T12:07:23.000Z\",\n            \"UserEmail\": \"email@mail.com\",\n            \"PaymentMethod\": \"TRANSFER\",\n            \"createdAt\": \"2021-05-05T12:07:23.000Z\",\n            \"updatedAt\": \"2021-05-05T12:31:04.269Z\"\n        },\n        \"course\": {\n            \"id\": 1,\n            \"CourseName\": \"Javascript ++\",\n            \"Instructor\": \"John Doeeee\",\n            \"Price\": 1000,\n            \"IncomeSharing\": 0.2,\n            \"createdAt\": \"2021-05-05T12:07:23.000Z\",\n            \"updatedAt\": \"2021-05-05T12:31:04.286Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/invoices/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:3000"
+		}
+	]
+}
